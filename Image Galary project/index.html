@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="nature">Nature</button>
+    <button data-filter="city">City</button>
+    <button data-filter="people">People</button>
+  </div>
+
+  <!-- IMAGE FILTER SLIDER -->
+  <div class="filter-control">
+    <label>Image Filter: </label>
+    <select id="filterType">
+      <option value="none">None</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="sepia">Sepia</option>
+      <option value="contrast">High Contrast</option>
+    </select>
+
+    <br><br>
+
+    <label>Intensity: </label>
+    <input type="range" id="filterRange" min="0" max="100" value="0" />
+  </div>
+
+  <!-- GALLERY GRID -->
+  <div class="gallery" id="gallery">
+
+    <div class="card" data-category="nature">
+      <img src="https://picsum.photos/id/1018/800/600" />
+    </div>
+
+    <div class="card" data-category="city">
+      <img src="https://picsum.photos/id/1011/800/600" />
+    </div>
+
+    <div class="card" data-category="people">
+      <img src="https://picsum.photos/id/1027/800/600" />
+    </div>
+
+    <div class="card" data-category="nature">
+      <img src="https://picsum.photos/id/1043/800/600" />
+    </div>
+
+    <div class="card" data-category="city">
+      <img src="https://picsum.photos/id/1031/800/600" />
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX VIEW -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightboxImg" />
+
+    <div class="controls">
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+      <button id="closeBtn">Close</button>
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
